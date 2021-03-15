@@ -2,7 +2,7 @@
 
 In this worksheet you will learn the basic principles behind the most popular version control system. You will also be introduced to a code editor that runs in your web browser. This lab shows you how to work with a local repository.
 
-The lab activities are detailed and cover a lot of useful skills. Take the time to practice the skills and learn how to use Git.
+The lab activities are detailed and cover a lot of useful skills. Take the time to practice the skills and learn how to use Git
 
 ## 1.1 Cloud9 IDE
 
