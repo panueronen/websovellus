@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: yellow;
+}
+
+h1, h2 {
+    color: blue;
+    font-weight: bold;
+}
+ul{
+    color: darkgrey;
+    border: #1b1d26;
+    text-indent: 15px;
+}
+figcaption{
+    font-size: small;
+    font-weight: bold;
+}
+p::first-letter {
+    font-size:8em;
+}
+
+p::first-line {
+    font-weight: bold;
+}

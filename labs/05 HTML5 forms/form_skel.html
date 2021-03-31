@@ -6,25 +6,29 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Demonstrating HTML forms</title>
+		<link href="form.css" type="text/css" rel="stylesheet">
 	</head>
 	
 	<body>
 		<h1>Turnitin</h1>
 		<form  lang="fi" action="">
+			<fieldset>
 			<div>
-				Name: <input type="text" name="studentname"/>
+				Name: <input type="text" name="studentname" placeholder="name"/>
 			</div>
 			<div>
-				Student id: <input type="text" name="id"  />
+				Student id: <input type="number" name="id" placeholder="student id" pattern="[0-9]{7}"/>
 			</div>
 			<div>
-				Email:
+				Email: <input type="email" name="email" placeholder="email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 				<!--
 				Make an input named "email"
 				-->
 			</div>
+			</fieldset>
+			<fieldset>
 			<div>
-				Assignment:
+				Assignment: <input type="text" name="assignment" placeholder="assignment">
 				<!--
 				Make an input named "assignment"
 				-->
@@ -32,28 +36,45 @@
 			</div>
 
 			<div>
-				Code:
+				Code: <input type="text" name="code" placeholder="student code">
 				<!--
 				Make an input named "code" which is a text area to put student's code into.
 				-->
 				
 			</div>
+			</fieldset>
 			<div>
-				Cheat:
+				Cheat: <input type="checkbox" name="cheat">
 			<!--
 				Make an input named "cheat" which is a check box the student must check.
 			-->
 			</div>
 			<div>
-				Pay:
+				<legend>payment method</legend>
+				<fieldset>
+				Pay: <input type="radio" name="payment" value="visa" id="visa">
+				<label for="visa">Visa</label>
+				<input type="radio" name="payment" value="paypal" id="paypal">
+				<label for="paypal">Paypal</label>
+				<input type="radio" name="payment" value="mastercard" id="mastercard">
+				<label for="mastercard">Mastercard</label>
+
 			<!--
 				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
 			-->
 			</div>
 			<div>
-				Score:
+				score: <select name="score" id="score">
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+				</select>
+				</fieldset>
 			<!--
-				Make an input named "score" which is a list of choices for the score 
+				Make an input named "score" which is a list of choices for the score
+								Score: <input type="" name="score">
 			-->
 			</div>
 			<input type="submit" />

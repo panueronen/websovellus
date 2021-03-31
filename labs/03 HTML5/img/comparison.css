@@ -1,0 +1,23 @@
+thead#first{
+    background-color: red;
+}
+
+.caption{
+    outline: 5px black;
+    font-weight: bold;
+}
+.property{
+    font-weight: bold;
+    border-right: groove gray;
+}
+table{
+    border: solid black;
+    padding: 0px;
+    border-spacing: 0px;
+}
+tr{
+
+}
+tr:nth-child(even) {
+    background-color: gray;
+}
