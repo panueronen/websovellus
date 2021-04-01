@@ -11,6 +11,7 @@ function process() {
     
     // Get form references:
     var email = document.getElementById('email');
+    var name = document.getElementById('user')
     var comments = document.getElementById('comments');
     // Validate the email address:
     if (!email || !email.value 
@@ -18,6 +19,11 @@ function process() {
     || (email.value.indexOf('@') == -1)) {
         okay = false;
         alert('Please enter a valid email address!');
+    }
+
+    //validate the name
+    if(!name || name.value.length < 3 || name.value.length >100 || name.value.indexOf(' ')== (-1 || name.value.length || 0)){
+        alert('please enter a valid name')
     }
 
     // Validate the comments:
