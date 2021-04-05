@@ -10,6 +10,29 @@
     Make a request
   </span>
 
+  <textarea id="urlbox" datatype="text"></textarea>
+  <button type="button" onclick="test404()">Button!</button>
+
+    <script type="text/javascript">
+        function test404(){
+            var url = document.getElementById("urlbox").value;
+            httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = alert2;
+            httpRequest.open('GET', url);
+            httpRequest.send();
+
+
+        }
+        function alert2() {
+            if (httpRequest.readyState === 4) {
+                if (httpRequest.status === 404) {
+                    alert("site is down");
+                } else {
+                    alert('not 404');
+                }
+            }
+        }
+    </script>
 
   <script type="text/javascript">
   (function() {
@@ -50,13 +73,14 @@
     // the callback
     // this will be run when the request completes (see above)
     function alertContents() {
-      if (httpRequest.readyState === 4) {
-        if (httpRequest.status === 200) {
-          alert(httpRequest.responseText);
-        } else {
-          alert('There was a problem with the request.');
+        if (httpRequest.readyState === 4) {
+            if (httpRequest.status === 404) {
+                alert(httpRequest.responseText);
+            } else {
+                alert('There was a problem with the request.');
+            }
         }
-      }
+
     }
   })();
   </script>

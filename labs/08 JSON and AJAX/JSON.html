@@ -9,17 +9,46 @@ var fidoString = '{ "name": "Fido", "breed": "Mixed", "weight": 38 }';
 var fido = JSON.parse(fidoString);
 console.log("We have made a dog out of a string! " + fido.name);
 
+var employee = {
+  name: { first: "Colin",
+    second: "Stephen" },
+  title: "Assistant Lecturer"
+};
+
+
+
 
 var fido2 = {
 	name: "Fido",
 	breed: "Mixed",
 	weight: 38
 };
+
 var fidoString = JSON.stringify(fido2);
 console.log("We made a string from a dog! " + fidoString);
+
+
+
+window.onload = init;
+function init(){
+  var mystring = JSON.stringify(employee);
+  document.getElementById("p").innerHTML = mystring;
+
+  var myObject = JSON.parse(mystring);
+  myObject.name.first = "make";
+  mystring = JSON.stringify(myObject);
+  document.getElementById("a").innerHTML = mystring;
+
+
+}
+
+
+
 
   </script>
 </head>
 <body>
+<p id="p">This is some text</p>
+<p id="a">this is some text2</p>
 </body>
 </html>
