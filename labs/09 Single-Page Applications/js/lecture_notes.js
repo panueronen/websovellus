@@ -74,3 +74,12 @@ function loadList() {
 		table.appendChild(row);
 	}
 }
+function changeView (view) {
+	if (view === 'add') {
+		document.getElementById('addPage').style.display = 'inherit'
+		document.getElementById('editPage').style.display = 'none'
+	} else if (view === 'edit') {
+		document.getElementById('addPage').style.display = 'none'
+		document.getElementById('editPage').style.display = 'inherit'
+	}
+}
