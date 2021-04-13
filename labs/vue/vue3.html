@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <span>{{numero}}</span>
+    <br>
+    <button v-on:click="zero">nollaa</button>
+    <button v-on:click="increment">lisää</button>
+    <button v-on:click="decrease">vähennä</button>
+
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            numero: 0
+        },
+        methods: {
+            zero: function () {
+                this.numero = 0
+            },
+            increment: function () {
+                this.numero = this.numero + 1
+            },
+            decrease: function () {
+                this.numero = this.numero -1
+            }
+        }
+    })
+</script>
+</body>
+</html>
